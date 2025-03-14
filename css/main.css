@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --dick: 0;
+}
+
+@font-face {
+  font-family: Kamerik-3d;
+  src: url(../fonts/kamerik205-heavy.woff2);
+  font-weight: 900;
+}
+@font-face {
+  font-family: Merriweather-3d;
+  src: url(../fonts/merriweather-regular-italic.woff2);
+}
+body {
+  background-color: black;
+  font-family: Kamerik-3d;
+  color: white;
+}
+
+.logo {
+  height: 150px;
+  width: 150px;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.layers {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  overflow: hidden;
+}
+
+.layers__container {
+  height: 100vh;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateX(var(--move-x)) rotateY(var(--move-y));
+          transform: rotateX(var(--move-x)) rotateY(var(--move-y));
+}
+
+.layers__item {
+  position: absolute;
+  inset: -6vw;
+  background-size: cover;
+  background-position: center;
+}
+
+.layer-1 {
+  -webkit-transform: translateZ(-55px) scale(1.06);
+          transform: translateZ(-55px) scale(1.06);
+}
+
+.layer-2 {
+  -webkit-transform: translateZ(80px) scale(0.88);
+          transform: translateZ(80px) scale(0.88);
+}
+
+.layer-3 {
+  -webkit-transform: translateZ(180px) scale(0.88);
+          transform: translateZ(180px) scale(0.88);
+}
+
+.layer-4 {
+  -webkit-transform: translateZ(190px) scale(0.88);
+          transform: translateZ(190px) scale(0.88);
+}
+
+.layer-5 {
+  -webkit-transform: translateZ(300px) scale(0.88);
+          transform: translateZ(300px) scale(0.88);
+}
+
+.layer-6 {
+  -webkit-transform: translateZ(380px) scale(0.88);
+          transform: translateZ(380px) scale(0.88);
+}
